@@ -1,6 +1,6 @@
 #Olá sou o Bryan Caristiati costa 👋
 
-<br>🔭 Estou fazendo atualmente front-end na unissuam<br/>
+<br>🔭 Atualmente, estou trabalhando com front-end na Unissuam. Tenho experiência em design, principalmente no Adobe Photoshop e em modelagem 3D no Blender, além de estar cursando na Zion Caxias. Desejo também adquirir conhecimentos na área de programação, principalmente para me aperfeiçoar cada vez mais.<br/>
 <br>🌱 Estou estudando python,html,css,javascript,...<br/>
 <br>📫 Contate-me no email:Bryan161101@gmail.com<br/>
 <br>😄 Pronouns: ele/dele<br/>
