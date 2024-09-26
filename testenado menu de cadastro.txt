@@ -120,7 +120,7 @@
             const senha = document.getElementById('senha');
             const confirmarSenha = document.getElementById('confirmarSenha');
             const errorMessage = document.getElementById('error-message');
-
+            
             let isValid = true;
 
             // Resetando os campos
@@ -129,6 +129,11 @@
             errorMessage.textContent = '';
 
             // Validação de senha
+             function setError(index) {
+             campos [index].style.border="2px solid #e63636";
+             spans [index].styel.display="block";
+             }
+            function nameValidate(){
             if (senha.value.length < 4 || senha.value.length > 8) {
                 senha.classList.add('error');
                 errorMessage.textContent = 'A senha deve ter entre 4 e 8 caracteres.';
