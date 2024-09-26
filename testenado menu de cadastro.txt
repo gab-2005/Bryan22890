@@ -76,35 +76,36 @@
         <h2>Informações Pessoais</h2>
 
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Nome completo" minlength="15" maxlength="80" required>
+        <input type="text" id="nome" placeholder="Nome completo" minlength="15" maxlength="80" class= inputs required>
 
         <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" class= inputs required>
 
         <label>Sexo:</label>
-        <input type="radio" name="sexo" value="Masculino" required> Masculino
-        <input type="radio" name="sexo" value="Feminino" required> Feminino
-        <input type="radio" name="sexo" value="NaoResponder" required> Prefiro Não Responder
+        <input type="radio" name="sexo" value="Masculino" class= inputs required> Masculino
+        <input type="radio" name="sexo" value="Feminino" class= inputs required> Feminino
+        <input type="radio" name="sexo" value="NaoResponder" class= inputs required> Prefiro Não Responder
 
         <label for="cel">Cel:</label>
-        <input type="text" id="cel" placeholder="(xx) xxxxx-xxxx" maxlength="14" required>
+        <input type="text" id="cel" placeholder="(xx) xxxxx-xxxx" maxlength="14" class= inputs required>
 
         <label for="cep">CEP:</label>
-        <input type="text" id="cep" placeholder="xxxxx-xxx" maxlength="9" required>
+        <input type="text" id="cep" placeholder="xxxxx-xxx" maxlength="9" class= inputs required>
 
         <label for="nascimento">Data de Nascimento:</label>
-        <input type="date" id="nascimento" required>
+        <input type="date" id="nascimento" class= inputs required>
 
         <h3>Crie seu login</h3>
 
         <label for="login">Login:</label>
-        <input type="text" id="login" placeholder="user" maxlength="6" required>
+        <input type="text" id="login" placeholder="user" maxlength="6" class= inputs required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" placeholder="********" minlength="4" maxlength="8" required>
-
+        <input type="password" id="senha" placeholder="********" minlength="4" maxlength="8" class= inputs required>
+        <span class="span-required">senhas devem ser compativeis</span>
+        
         <label for="confirmarSenha">Confirme a senha:</label>
-        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" class= inputs required>
 
         <div id="error-message" class="error-message"></div>
 
