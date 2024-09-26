@@ -1,0 +1,50 @@
+javascript
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('cadastroForm');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita o envio do formulário
+
+        const fields = {
+            senha: document.getElementById('senha'),
+            confirmarSenha: document.getElementById('confirmarSenha'),
+            nome: document.getElementById('nome'),
+            cpf: document.getElementById('cpf'),
+            cel: document.getElementById('cel'),
+            cep: document.getElementById('cep'),
+            nascimento: document.getElementById('nascimento'),
+            errorMessage: document.getElementById('error-message')
+        };
+
+        let isValid = true;
+        fields.errorMessage.textContent = ''; // Limpa mensagens anteriores
+
+        // Função para validar campos
+        const validateField = (field, condition, message) => {
+            if (!condition) {
+                field.classList.add('error');
+                fields.errorMessage.textContent += message + '\n';
+                isValid = false;
+            } else {
+                field.classList.remove('error');
+                field.classList.add('success');
+            }
+        };
+
+        // Validações
+        validateField(fields.senha, fields.senha.value.length >= 4 && fields.senha.value.length <= 8, 'A senha deve ter entre 4 e 8 caracteres.');
+        validateField(fields.senha, fields.senha.value === fields.confirmarSenha.value, 'As senhas não coincidem.');
+        validateField(fields.nome, fields.nome.value.length >= 15, 'O nome deve ter pelo menos 15 caracteres.');
+        validateField(fields.cpf, /^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(fields.cpf.value), 'CPF deve estar no formato xxx.xxx.xxx-xx.');
+        validateField(fields.cel, /^\(\d{2}\) \d{5}-\d{4}$/.test(fields.cel.value), 'Celular deve estar no formato (xx) xxxxx-xxxx.');
+        validateField(fields.cep, /^\d{5}-\d{3}$/.test(fields.cep.value), 'CEP deve estar no formato xxxxx-xxx.');
+
+        // Se for válido, envia o formulário
+        if (isValid) {
+            alert('Cadastro realizado com sucesso!');
+            form.submit(); // Aqui você pode redirecionar
+        }
+    });
+});
+
