@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro TBNED</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            border-color: red;
+        }
+
+        .success {
+            border-color: green;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="cadastroForm">
+        <h1>Cadastro TBNED</h1>
+        <h2>Informações Pessoais</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome completo" minlength="15" maxlength="80" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="Masculino" required> Masculino
+        <input type="radio" name="sexo" value="Feminino" required> Feminino
+        <input type="radio" name="sexo" value="NaoResponder" required> Prefiro Não Responder
+
+        <label for="cel">Cel:</label>
+        <input type="text" id="cel" placeholder="(xx) xxxxx-xxxx" maxlength="14" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" placeholder="xxxxx-xxx" maxlength="9" required>
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" required>
+
+        <h3>Crie seu login</h3>
+
+        <label for="login">Login:</label>
+        <input type="text" id="login" placeholder="user" maxlength="6" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="********" minlength="4" maxlength="8" required>
+
+        <label for="confirmarSenha">Confirme a senha:</label>
+        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+
+        <div id="error-message" class="error-message"></div>
+
+        <button type="submit">Tudo pronto</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            const senha = document.getElementById('senha');
+            const confirmarSenha = document.getElementById('confirmarSenha');
+            const errorMessage = document.getElementById('error-message');
+
+            let isValid = true;
+
+            // Resetando os campos
+            senha.classList.remove('error', 'success');
+            confirmarSenha.classList.remove('error', 'success');
+            errorMessage.textContent = '';
+
+            // Validação de senha
+            if (senha.value.length < 4 || senha.value.length > 8) {
+                senha.classList.add('error');
+                errorMessage.textContent = 'A senha deve ter entre 4 e 8 caracteres.';
+                isValid = false;
+            } else {
+                senha.classList.add('success');
+            }
+
+            // Confirmação de senha
+            if (senha.value !== confirmarSenha.value) {
+                confirmarSenha.classList.add('error');
+                errorMessage.textContent = 'As senhas não coincidem.';
+                isValid = false;
+            } else if (isValid) {
+                confirmarSenha.classList.add('success');
+            }
+
+            // Se for válido, envie o formulário
+            if (isValid) {
+                alert('Cadastro realizado com sucesso!');
+                this.submit(); // Aqui você pode redirecionar
+            }
+        });
+    </script>
+
+</body>
+
+</html>
