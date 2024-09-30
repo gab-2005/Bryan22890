@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, .body{
+    height: 100%over;
+    
+}
+
+body{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: linear-gradient(90.14deg, #B916F2 0.1%, #0D8C47 91.9%);
+}
+
+
+header{
+    height: 200px;
+    padding: 50px 0;
+}
+
+.center{ 
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 2%;
+}
+
+.box{
+    position:relative;
+    bottom: -30px;
+    right: -950px;
+    width: 420px;
+    height: 600px;
+    border-radius: 15%;
+    background-color: #aa73be;
+}
+
+.text{
+    position: relative;
+    top: -60;
+    bottom: -30px;
+    right: -950px;
+    font-size: 85%;
+}
+
+.email2{
+   position: relative;
+   top: 5px;
+   right: 37px;
+}
+
+.senha{
+    position: relative;
+    top: -13px ;
+    right: -2px;
+    font-size: 85%;
+}
+
+.senha2{
+    position: relative;
+    top: 5px;
+    right: 37px;
+}
+
+.remember{
+    position: relative;
+    right: -1px;
+}
+
+.remember2{
+    position: relative;
+    right: -5px;
+    top: -1px;
+}
+
+.text{
+    position: relative;
+    right: -53px;
+    bottom: -165px;
+}
+
+.forgetpass{
+    position: relative;
+    top: 20px;
+    right: 113px;
+}
+
+.entrar{
+    position: relative;
+    bottom: -18px;
+    width: -50%;
+}
+
+.resetar{
+    position: relative;
+    right: -90px;
+    bottom: -18px;
+}
+
+.logo{
+    position: relative;
+    right: -959px;
+    top: -35px;
+    border-radius: 6%;
+}
+
+
+.imagem{
+   
+    position: relative;
+    top: -236px;
+    right: -30px;
+}
