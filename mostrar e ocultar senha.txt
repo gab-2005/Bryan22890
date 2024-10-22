@@ -1,0 +1,38 @@
+card games 1 
+#html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Senha para Texto Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Trocar Senha para Texto Simples</h2>
+<label for="senha">Senha:</label>
+<input type="password" id="senha" placeholder="Digite sua senha">
+<input type="checkbox" id="mostrarSenha"> Mostrar Senha
+
+<script>
+    const mostrarSenha = document.getElementById('mostrarSenha');
+    const senhaInput = document.getElementById('senha');
+
+    mostrarSenha.addEventListener('change', function() {
+        if (mostrarSenha.checked) {
+            senhaInput.type = 'text'; // Altera para texto simples
+        } else {
+            senhaInput.type = 'password'; // Altera para senha
+        }
+    });
+</script>
+
+</body>
+</html>
