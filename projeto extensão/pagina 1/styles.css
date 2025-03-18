@@ -62,7 +62,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #941a69;
+    background-color: rgb(247, 247, 247);
 }
 
 /* Cards */
@@ -126,7 +126,7 @@ p {
 }
 
 .pagination .page-link:hover {
-    background-color: #b62282;
+    background-color: #d9d487;
 }
 
 
